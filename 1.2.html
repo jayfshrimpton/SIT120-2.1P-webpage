@@ -1,0 +1,70 @@
+<html>
+    <head>
+    <h1> My Webpage </h1>
+    <h3> Welcome, I hope my webpage has good web design. </h3>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        </head>
+    <p style="font-size: large">
+        Responsive Web Design is a concept that outlines designing a website in a way that is responsive and fits on the screen and looks proper on a range of devices.
+        <br> You can achieve this by using certain techniques like using meta name="viewport" to set the content width and scale to fit the device.
+        <br> By employing Responsive Web Design concepts into your webpages, you allow people to view your content on any device properly.
+    </p>
+    <img src="landscape-color.jpg" style="width:60%;">
+
+    <body>
+        <h1>JavaScript Concepts Example</h1>
+        <p id="stringMethods">String Methods: </p>
+        <p id="numberMethods">Number Methods: </p>
+        <p id="arrayMethods">Array Methods: </p>
+        <p id="dateMethods">Date Methods: </p>
+        <p id="functionMethods">Function Methods: </p>
+    
+        <script>
+            // String Methods
+            let str = "JavaScript is a powerful language!";
+            document.getElementById("stringMethods").innerHTML += `Original String: ${str}<br>`;
+            document.getElementById("stringMethods").innerHTML += `Length: ${str.length}<br>`;
+            document.getElementById("stringMethods").innerHTML += `Uppercase: ${str.toUpperCase()}<br>`;
+            document.getElementById("stringMethods").innerHTML += `Substring: ${str.substring(0, 10)}<br>`;
+            document.getElementById("stringMethods").innerHTML += `Replace: ${str.replace("powerful", "amazing")}<br>`;
+    
+            // Number Methods
+            let num = 42.56789;
+            document.getElementById("numberMethods").innerHTML += `Original Number: ${num}<br>`;
+            document.getElementById("numberMethods").innerHTML += `Rounded: ${num.toFixed(2)}<br>`;
+            document.getElementById("numberMethods").innerHTML += `Absolute Value: ${Math.abs(num)}<br>`;
+            document.getElementById("numberMethods").innerHTML += `Square Root: ${Math.sqrt(num)}<br>`;
+            document.getElementById("numberMethods").innerHTML += `Random Number: ${Math.random()}<br>`;
+    
+            // Array Methods
+            let fruits = ["apple", "banana", "cherry", 42, 15, "grape"];
+            document.getElementById("arrayMethods").innerHTML += `Original Array: [${fruits.join(", ")}]<br>`;
+            document.getElementById("arrayMethods").innerHTML += `Length: ${fruits.length}<br>`;
+            document.getElementById("arrayMethods").innerHTML += `Index of 'banana': ${fruits.indexOf("banana")}<br>`;
+            document.getElementById("arrayMethods").innerHTML += `Last Index of 42: ${fruits.lastIndexOf(42)}<br>`;
+            document.getElementById("arrayMethods").innerHTML += `Concatenation: [${fruits.concat(["orange", "kiwi"]).join(", ")}]<br>`;
+    
+            // Date Methods
+            let today = new Date();
+            document.getElementById("dateMethods").innerHTML += `Current Date: ${today.toDateString()}<br>`;
+            document.getElementById("dateMethods").innerHTML += `Current Time: ${today.toLocaleTimeString()}<br>`;
+            document.getElementById("dateMethods").innerHTML += `Day of the Week: ${today.getDay()}<br>`;
+            document.getElementById("dateMethods").innerHTML += `Full Year: ${today.getFullYear()}<br>`;
+            document.getElementById("dateMethods").innerHTML += `UTC Date: ${today.getUTCDate()}<br>`;
+    
+            // Function Methods
+            function greet(name) {
+                return `Hello, ${name}!`;
+            }
+    
+            let greeting = greet("John");
+            document.getElementById("functionMethods").innerHTML += `Function Result: ${greeting}<br>`;
+    
+            let functionAsString = greet.toString();
+            document.getElementById("functionMethods").innerHTML += `Function as String: ${functionAsString}<br>`;
+        </script>
+    </body>
+</html>
+
+
+   
