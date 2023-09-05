@@ -27,6 +27,7 @@
             document.getElementById("stringMethods").innerHTML += `Uppercase: ${str.toUpperCase()}<br>`;
             document.getElementById("stringMethods").innerHTML += `Substring: ${str.substring(0, 10)}<br>`;
             document.getElementById("stringMethods").innerHTML += `Replace: ${str.replace("powerful", "amazing")}<br>`;
+            document.getElementById("stringMethods").innerHTML += `Split: [${str.split(" ").join(", ")}]<br>`; 
     
             // Number Methods
             let num = 42.56789;
@@ -35,6 +36,7 @@
             document.getElementById("numberMethods").innerHTML += `Absolute Value: ${Math.abs(num)}<br>`;
             document.getElementById("numberMethods").innerHTML += `Square Root: ${Math.sqrt(num)}<br>`;
             document.getElementById("numberMethods").innerHTML += `Random Number: ${Math.random()}<br>`;
+            document.getElementById("numberMethods").innerHTML += `Exponential Notation: ${num.toExponential(2)}<br>`; 
     
             // Array Methods
             let fruits = ["apple", "banana", "cherry", 42, 15, "grape"];
@@ -43,6 +45,7 @@
             document.getElementById("arrayMethods").innerHTML += `Index of 'banana': ${fruits.indexOf("banana")}<br>`;
             document.getElementById("arrayMethods").innerHTML += `Last Index of 42: ${fruits.lastIndexOf(42)}<br>`;
             document.getElementById("arrayMethods").innerHTML += `Concatenation: [${fruits.concat(["orange", "kiwi"]).join(", ")}]<br>`;
+            document.getElementById("arrayMethods").innerHTML += `Array Includes 15: ${fruits.includes(15)}<br>`;
     
             // Date Methods
             let today = new Date();
@@ -56,12 +59,22 @@
             function greet(name) {
                 return `Hello, ${name}!`;
             }
+
+            function slap(thing) {
+                return `You slapped ${thing}!`;
+            }
     
             let greeting = greet("John");
             document.getElementById("functionMethods").innerHTML += `Function Result: ${greeting}<br>`;
     
             let functionAsString = greet.toString();
             document.getElementById("functionMethods").innerHTML += `Function as String: ${functionAsString}<br>`;
+
+            let slapping = slap("table");
+            document.getElementById("functionMethods").innerHTML += `Function Result: ${slapping}<br>`;
+
+            let slapAsString = slap.toString();
+            document.getElementById("functionMethods").innerHTML += `Function as String: ${slapAsString}<br>`;
         </script>
     </body>
 </html>
